@@ -14,7 +14,7 @@ RUN go mod download -x
 RUN go install -mod=mod github.com/githubnemo/CompileDaemon
 
 # Expose port 80 to the outside world
-EXPOSE 80
+EXPOSE 9000
 
 # Command to run the executable
 ENTRYPOINT CompileDaemon --build="go build main.go" --command="./main"
